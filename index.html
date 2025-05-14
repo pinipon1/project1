@@ -5,12 +5,15 @@
      <title>Docker Project</title>
     </head>
     <body>
-     <p>Welcome to my Docker Project!<p>
-        <p>Date, Time: <span id='date-time'></span><p>
-        <script>
-             var dateAndTime = new Date();
-             document.getElementById('date-time').innerHTML=dateAndTime.toLocaleString();
-        </script>
+     <p>Welcome to my Docker Project!</p>
+     <p>Date: <span id="date"></span></p>
+     <p>Time: <span id="time"></span></p>
+
+     <script>
+      var now = new Date();
+      document.getElementById('date').innerHTML = now.toLocaleDateString();
+      document.getElementById('time').innerHTML = now.toLocaleTimeString();
+     </script>
      <p>Hello World!!!</p>
-        </body>
+    </body>
 </html>
