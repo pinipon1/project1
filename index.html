@@ -1,19 +1,33 @@
 <!doctype html>
 <html>
- <body style="backgroud-color:rgb(49, 214, 220);"><center>
-    <head>
-     <title>Docker Project</title>
-    </head>
-    <body>
-     <p>Welcome to my Docker Project!</p>
-     <p>Date: <span id="date"></span></p>
-     <p>Time: <span id="time"></span></p>
+<head>
+  <title>Docker Project</title>
+  <style>
+    body {
+      background-color: rgb(49, 214, 220);
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>Welcome to my Docker Project!</p>
+  <p>Date: <span id="date"></span></p>
+  <p>Time: <span id="time"></span></p>
+  <p>Hello World!!!</p>
 
-     <script>
-      var now = new Date();
+  <script>
+    function updateDateTime() {
+      const now = new Date();
       document.getElementById('date').innerHTML = now.toLocaleDateString();
       document.getElementById('time').innerHTML = now.toLocaleTimeString();
-     </script>
-     <p>Hello World!!!</p>
-    </body>
+    }
+
+    // Initial load
+    updateDateTime();
+
+    // Update time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</body>
 </html>
